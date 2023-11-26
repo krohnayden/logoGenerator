@@ -13,18 +13,20 @@ function writeToFile(fileName, userInput) {
     let userShape;
     if (userInput.shapes === "Circle") {
         userShape = new Circle();
-        svg += `<circle cx="50" cy="50" r="75" fill="${userInput.logoColor}"/>`
+        svg += `<circle cx="150" cy="125" r="75" fill="${userInput.logoColor}"/>`
+        svg += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${userInput.textColor}">${userInput.text}</text>`;
     } 
     else if (userInput.shapes === "Triangle") {
         userShape = new Triangle();
         svg += `<polygon points="125, 30 50, 200 200, 200" fill="${userInput.logoColor}"/>`
+        svg += `<text x="125" y="150" text-anchor="middle" font-size="40" fill="${userInput.textColor}">${userInput.text}</text>`;
     }
     else {
         userShape = new Square();
         svg += `<rect x="85" y="55" width="125" height="125" fill="${userInput.logoColor}"/>`
+        svg += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${userInput.textColor}">${userInput.text}</text>`;
     }
     
-    svg += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${userInput.textColor}">${userInput.text}</text>`;
     svg += "</g>";
     svg += "</svg>";
 
