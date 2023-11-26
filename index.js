@@ -8,20 +8,20 @@ function writeToFile(fileName, userInput) {
     let svg = "";
     svg = '<svg version="1.1" width="300" height="300" xmlns="http://www.w3.org/2000/svg">';
     svg += "<g>";
-    svg += `${userInput.shape}`
+    svg += `${userInput.shapes}`
 
     let userShape;
-    if (userInput.shape === "Triangle") {
-        userShape = new Triangle();
-        svg += `<polygon points="250, 60 100, 400 400, 400" fill="${userInput.backgroundColor}"/>`
-    }
-    else if (userInput.shape === "Circle") {
+    if (userInput.shapes === "Circle") {
         userShape = new Circle();
-        svg += `<circle cx="50" cy="50" r="75" fill="${userInput.backgroundColor}"/>`
+        svg += `<circle cx="50" cy="50" r="75" fill="${userInput.logoColor}"/>`
+    } 
+    else if (userInput.shapes === "Triangle") {
+        userShape = new Triangle();
+        svg += `<polygon points="125, 30 50, 200 200, 200" fill="${userInput.logoColor}"/>`
     }
     else {
         userShape = new Square();
-        svg += `<square width="100" height="100" fill="${userInput.backgroundColor}"/>`
+        svg += `<rect x="85" y="55" width="125" height="125" fill="${userInput.logoColor}"/>`
     }
     
     svg += `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${userInput.textColor}">${userInput.text}</text>`;
@@ -43,12 +43,12 @@ function userPrompts() {
             {
                 type: 'input',
                 name: 'textColor',
-                message: 'Please enter the hex code for your text color.'
+                message: 'Please enter the hex code or color name for your text.'
             },
             {
                 type: 'input',
-                name: 'backgroundColor',
-                message: 'Please enter the hex code for your background color.'
+                name: 'logoColor',
+                message: 'Please enter the hex code or color name for your background.'
             },
             {
                 type: 'list',
