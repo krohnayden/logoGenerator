@@ -6,7 +6,7 @@ console.log("Generate your custom logo below!")
 
 function writeToFile(fileName, userInput) {
     let svg = "";
-    svg = '<svg version="1.1" width="300" height="300" xmlns="http://www.w3.org/2000/svg">';
+    svg = '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
     svg += "<g>";
 
     let userShape;
