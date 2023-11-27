@@ -2,16 +2,9 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+The logo generator creates unique logos based on user input for the background color, text color, shape, and text. The three shapes available are circles, triangles, and squares. This application allows someone who is unfamiliar on logo design an easy solution. Through building the logo generator I learned about svg graphics and how to build them as well as how to build functioning tests. 
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
+## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -20,20 +13,16 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+To install the readme generator, first ensure that you have installed inquirer using the "npm install -y". This will install the default node modules needed for inquirer. To ensure you are able to run the tests, install jest by entering "npm install jest" in the command line. Next, in the command line enter "node index.js". You will be prompted with four questions about the color of the background and text, as well as the shape and text for the logo. Once you have completed the questions the logo.svg file with automatically update with the required code for your logo. Drag it into your browser to view your logo. 
 
 ## Usage
 
-[Untitled_ Nov 27, 2023 3_17 PM.webm](https://github.com/krohnayden/logoGenerator/assets/143373263/9e209839-14f2-4479-8a92-eeb4311d3f6b)
+[Walkthrough Video](https://github.com/krohnayden/logoGenerator/assets/143373263/9e209839-14f2-4479-8a92-eeb4311d3f6b)
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+Thank you to University of Kansas for code to reference. 
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+MIT License
