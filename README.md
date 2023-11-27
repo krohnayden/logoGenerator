@@ -24,8 +24,8 @@ What are the steps required to install your project? Provide a step-by-step desc
 
 ## Usage
 
-Demo Video 
-
+###Demo Video 
+[Untitled_ Nov 27, 2023 3_17 PM.webm](https://github.com/krohnayden/logoGenerator/assets/143373263/9e209839-14f2-4479-8a92-eeb4311d3f6b)
 
 ## Credits
 
