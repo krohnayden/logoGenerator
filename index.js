@@ -1,14 +1,15 @@
+// Bringing in required utilities and files.
 const inquirer = require('inquirer')
 const fs = require('fs');
 const {Circle, Triangle, Square} = require('./lib/shapes');
 
 console.log("Generate your custom logo below!")
-
+//Function to write svg file.
 function writeToFile(fileName, userInput) {
     let svg = "";
     svg = '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">';
     svg += "<g>";
-
+    // If statement runs code based on user shape.
     let userShape;
     if (userInput.shapes === "Circle") {
         userShape = new Circle();
@@ -33,6 +34,7 @@ function writeToFile(fileName, userInput) {
         err ? console.log(err) : console.log("Logo Generated!")
     })
 }
+// Function to prompt user for logo specifications. 
 function userPrompts() {
     inquirer
         .prompt([
@@ -58,6 +60,7 @@ function userPrompts() {
                 choices: ['Circle', 'Triangle', 'Square']
             }
         ])
+        // Then statement checks for text length.
         .then((userInput) => {
             if (userInput.text.length > 3) {
                 console.log("Please enter less than 3 characters.")
